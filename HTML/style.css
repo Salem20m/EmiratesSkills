@@ -1,0 +1,25 @@
+/* All paragrahps will be blue */
+p {
+    color: blue;
+}
+/*class="red" will be red */
+.red {
+    color: red;
+}
+/* class bold */
+.bold {
+    font-weight: bold;
+}
+/* class navbar */
+.navbar {
+    color: green;
+}
+/* if a paragraoh was within a navbar element it will be purple */
+p.navbar {
+    color: purple;
+}
+
+ul.navbar {
+    color: pink;
+}
+

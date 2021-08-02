@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Images</title>
+</head>
+<body>
+<p>SVG: Good for illustrations, eg. logos, icons</p>
+<p>PNG: Can have transparent parts</p>
+<p>JPG: Can be compressed</p>
+<br><br>
+
+
+<h2>Responsive images</h2>
+
+<h3>Screen size</h3>
+<!-- Will change the size of the image depending on the device you open the website with -->
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-480.jpg"
+     alt="Wallpaper" 
+     width="480" height="360"
+
+     srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-960.jpg 2x,
+             https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-1440.jpg 3x,
+             https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-1920.jpg 4x"
+>
+<!-- here i should have got a bigger picture according to how many Xs the size is
+     and link each size with the appropriate photo -->
+
+
+
+<h3>Browser width</h3>
+<!-- Will change the size of the image depending on the width of the browser -->
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-480.jpg"
+     alt="Wallpaper" 
+     width="480" height="360"
+
+     srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-480.jpg 480w,
+             https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-960.jpg 960w,
+             https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-1440.jpg 1440w,
+             https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-1920.jpg 1920w"
+>
+
+<br><br>
+<h2>Responsive Picture</h2>
+
+<picture>
+
+    <source media="(min-width:600px)"
+            srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-320.jpg 320w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-720.jpg 720w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-960.jpg 960w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-1440.jpg 1440w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-1920.jpg 1920w">
+                    
+
+    <source srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-croped-320.jpg 320w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-croped-480.jpg 480w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-720.jpg 720w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-960.jpg 960w">
+
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-480.jpg"
+         alt="Wallpaper" 
+         width="480" height="360"
+    >
+</picture>
+
+
+<br><br>
+<h2>Figure</h2>
+
+<figure>
+    <img src="https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg"
+         height="300" width="500"
+         alt="wallpaper"
+        >
+    <figcaption>
+        A wallpaper for Desktops
+    </figcaption>
+</figure>
+
+<img src="https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg" 
+height="200" width="200" 
+alt="wallpaper">
+
+</body>
+</html>
