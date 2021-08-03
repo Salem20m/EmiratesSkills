@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Tables</title>
+
+    <style>
+        form label span {
+            color: red;
+        }
+
+        label, input, textarea, select {
+            display: block;
+        }
+
+        .required::after {
+            content:' *';
+            color: red;            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <main>
+
+        <!-- form attributes: action, method -->
+        <!-- label attribute: for:- to write the id of the input -->
+        <!-- input attributes: type, name id
+                                required, disabled, readonly, placeholder, value-->
+        <form action="index1.html">
+            <label for="name" class="required">Name:</label>
+            <input type="text" name="name" id="name" required placeholder="John Doe">
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="example@hey.you">
+
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password">
+
+            <label for="Phone">Phone: </label>
+            <input type="tel" name="age" id="age" placeholder="9715xxxxxxxx">
+
+            <label for="date">Date: </label>
+            <input type="date" name="date" id="date">
+
+            <label for="color">Color: </label>
+            <input type="color" name="color" id="color">
+
+            <label for="textarea1">Text Area: </label>
+            <textarea name="textarea1" id="textarea1" cols="22" rows="10"></textarea>
+
+            <label for="file">File: </label>
+            <input type="file" name="file" id="file" accept="image/*" multiple>
+
+
+            <!-- All options within a single question should have the same name -->
+            <fieldset>
+                <legend>Q1. What do you like to eat</legend>
+
+                <label for="checkbox1">Burgeeer: </label>
+                <input type="checkbox" name="Q1" id="checkbox1" value="Burgeeer">
+
+                <label for="checkbox2">Pizza: </label>
+                <input type="checkbox" name="Q1" id="checkbox2" value="Pizza">
+
+                <label for="checkbox3">Pasta: </label>
+                <input type="checkbox" name="Q1" id="checkbox3" value="Pasta">
+            </fieldset>
+
+            <fieldset>
+                <legend>Radio buttons in fieldset</legend>
+
+                <label for="men">Men</label>
+                <input type="radio" name="genre" id="men" value="Men">
+                <label for="women">Women</label>
+                <input type="radio" name="genre" id="women" value="Women">
+            </fieldset>
+
+
+            
+            <label for="selectlist">Choose One</label>
+            <select id="selectlist" name="selectlist">
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+            </select>
+
+
+
+            <button>Submit</button>
+        </form>
+
+    </main>
+
+</body>
+</html>

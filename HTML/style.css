@@ -23,3 +23,20 @@ ul.navbar {
     color: pink;
 }
 
+label, 
+input {
+    display: block;
+}
+
+
+label input {
+    border:  1px solid red;
+}
+
+form label span {
+    color: red;
+}
+
+input[disabled] {
+    color: blue;
+}

@@ -50,19 +50,35 @@ Attributes:-
 <!-- Adding captions -->
 <!-- CC file with .vtt extension -->
 
-
+<!-- kinds: captions, descriptions, chapters -->
 <h2>Video 3: with captions</h2>
-<video controls>
-    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.480p.vp9.webm" type='video/webm' 
-        height='480' width='270'>
+<video controls width="720" hieght="480">
+    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.480p.vp9.webm" type='video/webm'>
 
-    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.480p.h264.mp4" type='video/mp4' 
-        height='480' width='270'>
+    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.480p.h264.mp4" type='video/mp4' >
     
     <track src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.vtt"
-            kind="captions"
-            label="english">
+        kind="captions"
+        label="english"
+        srclang="en"
+        default>
+
+    <track src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.es-la.vtt"
+        kind="subtitles"
+        label="Español"
+        srclang="es">
 </video>
+<br><br>
+
+<h1>Embedding</h1>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IdoD2147Fik" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
+
+<section></section>
 
 </body>
 </html>
