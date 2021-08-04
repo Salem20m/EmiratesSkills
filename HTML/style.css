@@ -40,3 +40,10 @@ form label span {
 input[disabled] {
     color: blue;
 }
+
+/* 
+html {
+    background:
+        repeating-conic-gradient(#0000 0 90deg, white 0 180deg) 0 0/100px 100px,
+        radial-gradient(farthest-side,#ffc094 98%,#0000 )25px 0/50px 50px;
+  } */
