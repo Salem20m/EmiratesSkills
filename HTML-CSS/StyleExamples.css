@@ -1,0 +1,38 @@
+/* Style for an element */
+img {
+    width: 300px;
+}
+
+/* This is for class container */
+.container {
+    color: darkkhaki;
+}
+
+/* This is if an elemnt has class container and intro */
+.container.intro {
+    color: darkkhaki;
+}
+
+/* This is fir id FirstHeading */
+#FirstHeading {
+    background: peru;
+    font-size: 80px;
+}
+
+/* shorthand */
+article {
+    padding: 10px 5px;
+}
+/* longhand */
+article {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+header {
+    width: 80%;
+}
+

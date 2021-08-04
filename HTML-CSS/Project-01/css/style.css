@@ -1,0 +1,21 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+/* Rule for an element */
+img {
+    width: 300px;
+}
+
+/* * Applies the rules for all the elements */
+* {
+    border: 1px solid black;
+}
+
+body {
+    background: lightgray;
+}
+
+p {
+    color: rgba(0, 255, 0, 0.5) /* 50% opacity */
+}

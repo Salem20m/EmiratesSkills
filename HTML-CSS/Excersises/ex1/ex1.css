@@ -1,0 +1,20 @@
+* {
+    color: red;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: darkcyan;
+}
+
+.example {
+    font-style: italic;
+    color: orange;
+}
+
+.example2 {
+    background: black;
+}
