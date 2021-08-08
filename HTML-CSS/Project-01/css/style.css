@@ -1,21 +1,145 @@
-html {
-    scroll-behavior: smooth;
-  }
+@font-face {
+    font-family: "Calibri Regular";
+    src: url(../fonts/Calibri\ Regular.ttf);
+}
+@font-face {
+    font-family: "Calibri Bold";
+    src: url(../fonts/Calibri\ Bold.TTF);
+}
+@font-face {
+    font-family: "Calibri Light";
+    src: url(../fonts/Calibri\ Light.ttf);
+}
 
-/* Rule for an element */
+/*
+Color pallete
+#F7FFF7 - almost white
+#343434 - almost black
+#2F3061 - dark blue
+#FFE66D - yellow
+#A1C6D7 - light blue
+ */
+
+/* ********** Global Styles ********** */
+
+/* html {
+    box-sizing: border-box;
+} */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 img {
     width: 300px;
 }
 
-/* * Applies the rules for all the elements */
-* {
-    border: 1px solid black;
+body {
+    color: #343434;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background: lightgray;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #FFE66D;
+}
+
+a:hover {
+    text-decoration: none; /* The underline will be removed */
+}
+
+h1, h2 {
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    font-size: 90px;
+    margin-left: -10px;
+}
+
+h2 {
+    font-size: 40px;
 }
 
 p {
-    color: rgba(0, 255, 0, 0.5) /* 50% opacity */
+    line-height: 1.5;
 }
+
+.content-wrap {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px 0; /* this will add padding to top and bottom only */
+}
+
+
+
+/* ********** Profile ********** */
+header {
+    background: #2F3061;
+    color: #F7FFF7;
+}
+
+
+/* ********** Projects ********** */
+.projects {
+    background: #F7FFF7;
+}
+
+.projects .btn {
+    color: #F7FFF7;
+    background: #2F3061;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 6px; /* To round the edges */
+    display: inline-block;
+}
+
+/* The same color but with less opacity */
+.projects .btn:hover {
+    background: rgba(47, 48, 97, 80%);
+}
+
+/* For the rest of the links in projects section */
+.projects a {
+    color: #2F3061;
+}
+
+/* Floating the images to the left */
+.project-item {
+    /* overflow: hidden; */
+    border-bottom: 1px dashed #343434;
+    padding: 25px 0;
+}
+.project-item img {
+    /* float: left; */
+    margin-right: 15px;
+}
+
+
+
+
+
+/* ********** Work Experience ********** */
+.work-experience {
+    background: #A1C6D7;
+}
+
+/* ********** Educatiobn ********** */
+
+
+
+/* ********** Contact Info ********** */
+footer {
+    background: #343434;
+    color: #F7FFF7;
+}
+

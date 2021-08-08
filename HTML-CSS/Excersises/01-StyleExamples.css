@@ -1,0 +1,79 @@
+/* Style for an element */
+img {
+    width: 300px;
+}
+
+/* This is for class container */
+.container {
+    color: darkkhaki;
+}
+
+/* This is if an elemnt has class container and intro */
+.container.intro {
+    color: darkkhaki;
+}
+
+/* This is for paragraphs with class intro */
+p.intro {
+    font-size: 15px;
+}
+
+/* This is for any link, inside a paragraph, inside a section */
+section p a {
+    color: orange;
+}
+
+
+/* This is for id FirstHeading */
+#FirstHeading {
+    background: peru;
+    font-size: 80px;
+}
+
+/* shorthand */
+article {
+    padding: 10px 5px;
+}
+/* longhand */
+article {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+header {
+    width: 80%;
+}
+
+
+
+/* ***** Links ***** */
+/* ***** When styling links they have to be in this same order ***** */
+
+
+/* All links */
+a {
+    color: red;
+}
+
+/* ancor element that has an href link */
+a:link {
+    color:green;
+}
+
+/* Links that were visited */
+a:visited {
+    color:gray;
+}
+
+/* When you hover over the link using mouse  */
+a:hover {
+    background: gray;
+}
+
+/* When you click on the link */
+a:active {
+    color: white;
+}
