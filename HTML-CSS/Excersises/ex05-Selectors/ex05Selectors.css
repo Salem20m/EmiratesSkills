@@ -1,0 +1,28 @@
+/* Child combinator */
+/* the style will only apply to the direct child */
+.parent > .child {}
+
+
+/* Descendant selector */
+.parent .child {}
+.ansestor .descendant {}
+
+
+/****** Sibling combinators (~ , +) ******/
+
+/* Adjacent sibling combinator */
+h1 + p 
+{
+    /* This will only apply to a p that comes after an h1 directly */
+}
+
+/* General sibling combinator */
+h1 ~ p 
+{
+    /* This will apply to all p elements that come after an h1 element */
+}
+
+
+P:last-of-type {
+    /* This will apply to the last p */
+}

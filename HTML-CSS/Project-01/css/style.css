@@ -75,10 +75,30 @@ p {
 }
 
 .content-wrap {
-    width: 700px;
+    width: 800px;
     margin: 0 auto;
     padding: 50px 0; /* this will add padding to top and bottom only */
 }
+h3 {
+    margin-bottom: 0;
+}
+
+.item-details h3 + p { 
+    font-style: italic;
+}
+
+.item-details h3 ~ p {
+    margin: 0;
+}
+
+.devider > section {
+    padding-bottom: 25px 0;
+    border-bottom: 1px dashed #343434;
+}
+.devider > section:last-of-type { /* removing the border from the last section */
+    border-bottom: none;
+}
+
 
 
 
@@ -86,6 +106,7 @@ p {
 header {
     background: #2F3061;
     color: #F7FFF7;
+    text-align: center;
 }
 
 
@@ -116,8 +137,8 @@ header {
 /* Floating the images to the left */
 .project-item {
     /* overflow: hidden; */
-    border-bottom: 1px dashed #343434;
-    padding: 25px 0;
+    /* border-bottom: 1px dashed #343434;
+    padding: 25px 0; */
 }
 .project-item img {
     /* float: left; */
@@ -130,8 +151,19 @@ header {
 
 /* ********** Work Experience ********** */
 .work-experience {
-    background: #A1C6D7;
+    background: #0f96d4;
+    color: white;
 }
+
+.job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    column-gap: 30px;
+}
+
+
+
+
 
 /* ********** Educatiobn ********** */
 
@@ -141,5 +173,17 @@ header {
 footer {
     background: #343434;
     color: #F7FFF7;
+    text-align: center;
 }
 
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-list a {
+    padding: 10px;
+    display: inline-block;
+}

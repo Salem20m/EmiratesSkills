@@ -1,0 +1,87 @@
+/* display: flex; spans the width of its container */
+/* display: inline-flex; spans the width of its items */
+/* When a parent element is a flex, all child element will also be flex */
+/* flexboxes don't have margins by default */
+
+.flex-item {
+    background: rgb(156, 156, 156);
+    /* width: 50px;
+    height: 50px; */
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+.flex-container {
+    display: flex; /*************************************/
+    background: lightblue;
+}
+
+.inline-flex-container {
+    display: inline-flex; /*************************************/
+    background: lightblue;
+}
+
+.first {
+    background: lightgreen;
+}
+
+/* ***** FOR FLEX CONTAINER ***** */
+
+/* flex-direction: 
+                   row; content will run from left to right
+                   row-reverse; content will run from right to left
+                   column; content will run from top to bottom. and will span the width of container
+ */
+/* flex-wrap: 
+              wrap; will wrap the elements
+              nowrap; will not wrap the elements 
+*/
+
+
+/* ***** FOR FLEX ELEMENT ***** */
+
+/* flex-grow: determines whether items will expand if there's extra space in the container. 0 or 1  */
+/* flex-shrink: determines whether items will shrink if there isn't enough space in container. 0 or 1 
+                if shrink is set to 0. the content will overflow if there is not enough space 
+                unless flex-wrap is set to wrap.*/
+/* flex-basis: sets the initial size of the flex-items. if not then shrink or grow according 
+                to the 2 above attributes*/
+
+
+.flex-container {
+    width: 1000px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.inline-flex-container {
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+ .flex-item {
+    flex: 0 1 300px; /* flex: (grow) (shrink) (basis) */
+} 
+
+
+/* ***** ALIGNING ITEMS ***** */
+
+/* justify-content: aligns items on the main axis, x-axis */
+/* align-items: aligns items on cross axis, y-axis */
+
+.flex-container-aligning {
+    margin: 10px auto;
+    height: 300px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center; /********************/
+    align-items: center; /********************/
+}
+
+.flex-item-aligning {
+    background: rgb(156, 156, 156);
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+}
