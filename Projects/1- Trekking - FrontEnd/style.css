@@ -1,0 +1,289 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Quicksand-Regular";
+    src: url(Medias/quicksand/Quicksand-Regular.otf);
+}
+@font-face {
+    font-family: "Quicksand-Bold";
+    src: url(Medias/quicksand/Quicksand-Bold.otf);
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Quicksand-Bold";
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+#footer .alignright {
+    text-align: right;
+}
+
+
+.content-wrap{
+    width: 1150px;
+    height: inherit;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 1px;
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+
+
+
+
+
+/****** HEADER ******/
+#header {
+    background-image: url(Medias/imgs/background.png);
+    background-size: cover;
+    color: white;
+    height: 790px;
+}
+
+
+#header p {
+    font-family: "Quicksand-Regular";
+    font-size: 20px;
+}
+
+#header nav {
+    display: flex;
+    justify-content: space-between;    
+}
+
+#header nav img {
+    align-self: center;
+}
+
+nav ul {
+    width: 260px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#header .content-wrap {
+    display: flex;
+    flex-direction: column;    
+}
+
+#header .heading {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    text-align: center;    
+    margin: auto 0;
+}
+
+.heading p {
+    width: 570px;
+}
+
+
+/* .heading > * {
+    display: inline-block;
+} */
+
+#header a, #header a:visited {
+    color: white;
+    font: 18px;
+    text-decoration: none;
+    align-self: center;
+    margin-bottom: 47px;
+    
+}
+#header a:hover {
+    color: rgb(165, 165, 165);
+}
+
+
+
+/****** SEARCH ******/
+#search {
+    background: #f5f6f7;
+    height: 145px;
+}
+#search .content-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#search .button, #search .button:visited {
+    background: #aa9b77;
+    color: white;
+    text-decoration: none;
+    width: 205px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search .checkbox {
+    width: 25px;
+}
+
+
+
+#search , #products {
+    text-transform: uppercase;
+}
+/****** PRODUCTS ******/
+
+#products a {
+    display: inline-block;
+    width: 320px;
+    height: 380px;
+    background: #f5f6f7;
+}
+
+
+
+/****** ABOUT ******/
+#about {
+    height: 400px;
+    background: #aa9b77 ;
+}
+
+#about p {
+    color: #424242;
+    padding: 0 105px;
+}
+#about .content-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 75px 0;
+}
+#about .border {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    height: 255px;
+    width: 712px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #837659;
+}
+#about h3 {
+    background: #aa9b77;
+    color: #837659;    
+    margin-top: 0;
+    position: absolute;
+    top: -15px;
+    padding: 0 15px;    
+
+}
+
+
+
+/****** TWITTER ******/
+#twitter {
+    background: #535253;
+    color: white;
+    height: 75px;
+}
+
+#twitter .content-wrap {
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+#twitter img {
+    margin-right: 20px;
+}
+
+
+
+
+
+
+/****** FOOTER ******/
+#footer {
+    background: #424242 ;
+    color: white;
+    height: 350px;
+}
+#footer p {
+    font-size: 10px;
+}
+#footer h3 {
+    padding-bottom: 20px;
+}
+#footer h2 {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+#footer .content-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-item {
+    width: 320px;
+}
+
+#footer a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border-right: 2px solid orange;
+    padding: 0 5px;
+}
+#footer a:last-of-type {
+    border: none;
+    padding-right: 0px;
+}
+#footer a:visited {
+    color: white;
+}
+#footer a:hover {
+    color: rgb(165, 165, 165);
+}
+
+#footer .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
