@@ -19,12 +19,12 @@ nav ul {
   justify-content: center;
 }
 
-ul li {
+ul:first-child li {
   background-color: lightblue;
   padding: 30px 30px;
 }
 
-ul li:hover {
+ul:first-child li:hover {
   background-color: rgb(255, 228, 169);
   padding: 30px 30px;
 

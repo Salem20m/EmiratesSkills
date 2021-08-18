@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trekking Shop</title>
-<link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
@@ -30,7 +31,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
                 </div>
-                <a href="#footer"> <img src="Medias/imgs/arrow.png" alt="Arrow" title="Arrow"> </a>
+                <a href="#products"> <img src="Medias/imgs/arrow.png" alt="Arrow" title="Arrow"> </a>
             </div>
         </header>
         <section id="search">
@@ -38,19 +39,19 @@
                 <div class="checkboxes">
 
                     <div class="checkboxAndLabel">
-                        <input class="checkbox" type="checkbox" name="Search" id="CheckboxMen" value="Men">
+                        <input class="checkbox men" type="checkbox" name="Search" id="CheckboxMen" value="Men">
                         <span class="checkbox-custom"></span>
                         <label for="CheckboxMen">Men</label>
                     </div>
 
                     <div class="checkboxAndLabel">
-                        <input class="checkbox" type="checkbox" name="Search" id="CheckboxWomen" value="Women">
+                        <input class="checkbox women" type="checkbox" name="Search" id="CheckboxWomen" value="Women">
                         <span class="checkbox-custom"></span>
                         <label for="CheckboxWomen">Women</label>
                     </div>
 
                     <div class="checkboxAndLabel">
-                        <input class="checkbox" type="checkbox" name="Search" id="CheckboxChildren" value="Children">
+                        <input class="checkbox children" type="checkbox" name="Search" id="CheckboxChildren" value="Children" disabled>
                         <span class="checkbox-custom"></span>
                         <label for="CheckboxChildren">Children</label>
                     </div>
@@ -62,116 +63,105 @@
         </section>
         <section id="products">
             <div class="content-wrap">
-                <div class="category men">
-                    <h3>MEN</h3>
-                    <div class="one-5">
-                        <p class="small8px">1 / 5</p><i class="left arrow"></i><i class="right arrow"></i>
-                    </div>
-                </div>
-
-                <a class="product-item" href="">
-                    <div class="product-header">
-                        <p>SIZE <i class="down arrow"></i> </p>
-                        <div>
-                            <span class="colorbox blue"></span>
-                            <span class="colorbox yellow"></span>
-                            <span class="colorbox gray"></span>
+                <div class="men-products">
+                    <div class="category men">
+                        <h3>MEN</h3>
+                        <div class="one-5">
+                            <p class="small8px">1 / 5</p><i class="left arrow"></i><i class="right arrow"></i>
                         </div>
                     </div>
-
-                    <div class="product-pic">
-                        <img src="Medias/imgs/tshirt-men.png" alt="" title="">
-                    </div>
-
-                    <div class="product-description">
-                        <p class="name">T-SHIRT</p>
-                        <p class="price">5,00</p>
-                    </div>
-                </a>
-
-                <a class="product-item" href="">
-                    <div class="product-header">
-                        <p>SIZE <i class="down arrow"></i> </p>
-                    </div>
-
-                    <div class="product-pic">
-                        <img class="product-img" src="Medias/imgs/pants.png" alt="" title="">
-                    </div>
-
-                    <div class="product-description">
-                        <p class="name">PANTS FORCLAZ</p>
-                        <p class="price">30,00</p>
-                    </div>
-                </a>
-
-                <a class="product-item" href="">
-                    <div class="product-header">
-                        <p>SIZE <i class="down arrow"></i> </p>
-                    </div>
-
-                    <div class="product-pic">
-                        <img class="product-img" src="Medias/imgs/bag.png" alt="" title="">
-                    </div>
-
-                    <div class="product-description">
-                        <p class="name">BACKPACK</p>
-                        <p class="price">60,00</p>
-                    </div>
-                </a>
-
-                <div class="category women">
-                    <h3>WOMEN</h3>
-                    <div class="one-5">
-                        <p class="small8px">1 / 5</p><i class="left arrow"></i><i class="right arrow"></i>
-                    </div>
+                    <a class="product-item" href="">
+                        <div class="product-header">
+                            <p>SIZE <i class="down arrow"></i> </p>
+                            <div>
+                                <span class="colorbox blue"></span>
+                                <span class="colorbox yellow"></span>
+                                <span class="colorbox gray"></span>
+                            </div>
+                        </div>
+                        <div class="product-pic">
+                            <img src="Medias/imgs/tshirt-men.png" alt="" title="">
+                        </div>
+                        <div class="product-description">
+                            <p class="name">T-SHIRT</p>
+                            <p class="price">5,00</p>
+                        </div>
+                    </a>
+                    <a class="product-item" href="">
+                        <div class="product-header">
+                            <p>SIZE <i class="down arrow"></i> </p>
+                        </div>
+                        <div class="product-pic">
+                            <img class="product-img" src="Medias/imgs/pants.png" alt="" title="">
+                        </div>
+                        <div class="product-description">
+                            <p class="name">PANTS FORCLAZ</p>
+                            <p class="price">30,00</p>
+                        </div>
+                    </a>
+                    <a class="product-item" href="">
+                        <div class="product-header">
+                            <p>SIZE <i class="down arrow"></i> </p>
+                        </div>
+                        <div class="product-pic">
+                            <img class="product-img" src="Medias/imgs/bag.png" alt="" title="">
+                        </div>
+                        <div class="product-description">
+                            <p class="name">BACKPACK</p>
+                            <p class="price">60,00</p>
+                        </div>
+                    </a>
                 </div>
 
-                <a class="product-item" href="">
-                    <div class="product-header">
-                        <p>SIZE <i class="down arrow"></i> </p>
+                <div class="women-products">
+                    <div class="category women">
+                        <h3>WOMEN</h3>
+                        <div class="one-5">
+                            <p class="small8px">1 / 5</p><i class="left arrow"></i><i class="right arrow"></i>
+                        </div>
                     </div>
+                    <a class="product-item" href="">
+                        <div class="product-header">
+                            <p>SIZE <i class="down arrow"></i> </p>
+                        </div>
                     
-                    <div class="product-pic">
-                        <img class="product-img" src="Medias/imgs/jacket.png" alt="" title="">
-                    </div>
-
-                    <div class="product-description">
-                        <p class="name">GIACKET</p>
-                        <p class="price">60,00</p>
-                    </div>
-                </a>
-                <a class="product-item" href="">
-                    <div class="product-header">
-                        <p>SIZE <i class="down arrow"></i> </p>
-                    </div>
-
-                    <div class="product-pic">
-                        <img class="product-img" src="Medias/imgs/shoe.png" alt="" title="">
-                    </div>
-
-                    <div class="product-description">
-                        <p class="name">TREKKING SHOES</p>
-                        <p class="price">80,00</p>
-                    </div>
-                </a>
-                <a class="product-item" href="">
-                    <div class="product-header">
-                        <p>SIZE <i class="down arrow"></i> </p>
-                        <div>
-                            <span class="colorbox pink"></span>
-                            <span class="colorbox white"></span>
+                        <div class="product-pic">
+                            <img class="product-img" src="Medias/imgs/jacket.png" alt="" title="">
                         </div>
-                    </div>
-
-                    <div class="product-pic">
-                        <img class="product-img" src="Medias/imgs/tshirt-women.png" alt="" title="">
-                    </div>
-
-                    <div class="product-description">
-                        <p class="name">T-SHIRT</p>
-                        <p class="price">20,00</p>
-                    </div>
-                </a>
+                        <div class="product-description">
+                            <p class="name">GIACKET</p>
+                            <p class="price">60,00</p>
+                        </div>
+                    </a>
+                    <a class="product-item" href="">
+                        <div class="product-header">
+                            <p>SIZE <i class="down arrow"></i> </p>
+                        </div>
+                        <div class="product-pic">
+                            <img class="product-img" src="Medias/imgs/shoe.png" alt="" title="">
+                        </div>
+                        <div class="product-description">
+                            <p class="name">TREKKING SHOES</p>
+                            <p class="price">80,00</p>
+                        </div>
+                    </a>
+                    <a class="product-item" href="">
+                        <div class="product-header">
+                            <p>SIZE <i class="down arrow"></i> </p>
+                            <div>
+                                <span class="colorbox pink"></span>
+                                <span class="colorbox white"></span>
+                            </div>
+                        </div>
+                        <div class="product-pic">
+                            <img class="product-img" src="Medias/imgs/tshirt-women.png" alt="" title="">
+                        </div>
+                        <div class="product-description">
+                            <p class="name">T-SHIRT</p>
+                            <p class="price">20,00</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
         <section id="about">

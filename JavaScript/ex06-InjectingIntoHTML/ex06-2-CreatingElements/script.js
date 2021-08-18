@@ -42,7 +42,7 @@ const content = `
         everydayPack.strapLength.right
       } inches</span></li>
       <li class="packprop backpack__lid">Lid status:<span> ${
-        everydayPack.lidOpen
+        everydayPack.lidOpen ? 'Open' : 'Closed'
       }</span></li>
     </ul>
   </article>

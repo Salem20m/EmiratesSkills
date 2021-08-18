@@ -94,6 +94,7 @@ p {
 
 /****** HEADER ******/
 #header {
+    padding-top: 35px;
     background-image: url(Medias/imgs/background.png);
     background-size: cover;
     color: white;
@@ -248,6 +249,9 @@ nav ul {
     color: inherit;
 }
 
+.product-item {
+    border: 6px solid transparent;
+}
 .product-item:hover {
     border: 6px solid #aa9b77;
 }
@@ -348,8 +352,15 @@ nav ul {
     color: #424242;
 }
 
-
-
+.men-products, .women-products {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* .women-products {
+    display: none;
+} */
 
 
 
