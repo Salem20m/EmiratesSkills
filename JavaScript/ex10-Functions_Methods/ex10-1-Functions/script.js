@@ -21,6 +21,7 @@ console.log('Do More Math:', doMoreMath(4,4));
 
 
 // Arrow Function
+// NEVER USE ARROW FUNCTION IF YOU WANT TO USE 'this'
 const doArrowMath = (a, b) => {
   let c = a / b;
   return c
