@@ -7,31 +7,89 @@ let score = 0;
 const colors = document.querySelectorAll('svg path');
 const board = document.querySelector('svg');
 
-colors.forEach(function (color) {
-  color.addEventListener('mousedown', function() {
-    this.classList.add('active');
-    if(arraySolution.length != 0)
-    {
-      addToArrayAttempt(color);
-      let i = arrayAttempt.length-1
-      console.log('hey')
-      checkSolution(arrayAttempt[i], arraySolution[i]) 
-    }
-    playSound(this.classList[0]);
-  })
-  color.addEventListener('mouseup', function() {
-    color.classList.remove('active');
-    if(arrayAttempt.length == arraySolution.length 
-       && arraySolution.length != 0) {
-      score++;
-      addScore();
-      playSolution();
-      arrayAttempt = [];
+const currentPlayer = {
+  name: '',
+  score: 0
+}
 
-      console.log(arrayAttempt)
-    }
-  })
-})
+let Ranking = [];
+
+if(!localStorage.getItem('ranking')) {
+  localStorage.setItem('ranking', JSON.stringify(Ranking));
+} else {
+  Ranking = JSON.parse(localStorage.getItem('ranking'));
+}
+
+updateRanking();
+activateBoard();
+
+function mousedownFunction  () {  
+  this.classList.add('active');
+  if(arraySolution.length != 0)
+  {
+    addToArrayAttempt(this);
+    let i = arrayAttempt.length-1
+    // console.log('hey')
+    checkSolution(arrayAttempt[i], arraySolution[i]) 
+  }
+  playSound(this.classList[0]);  
+};
+
+function mouseupFunction () {  
+  this.classList.remove('active');
+  if(arrayAttempt.length == arraySolution.length 
+    && arraySolution.length != 0) {
+    score++;
+    addScore();
+    playSolution();
+    arrayAttempt = [];
+
+    // console.log(arrayAttempt)
+  }
+};
+
+
+function activateBoard () {
+  colors.forEach(function (color) {
+    color.addEventListener('mousedown', mousedownFunction)
+    color.addEventListener('mouseup', mouseupFunction)
+  });
+}
+
+function deactivateBoard () {
+  colors.forEach(function (color) {
+    color.removeEventListener('mouseup', mouseupFunction);
+    color.removeEventListener('mousedown', mousedownFunction);
+  });
+}
+
+// colors.forEach(function (color) {
+//   color.addEventListener('mousedown', function() {
+//     this.classList.add('active');
+//     if(arraySolution.length != 0)
+//     {
+//       addToArrayAttempt(color);
+//       let i = arrayAttempt.length-1
+//       console.log('hey')
+//       checkSolution(arrayAttempt[i], arraySolution[i]) 
+//     }
+//     playSound(this.classList[0]);
+//   })
+//   color.addEventListener('mouseup', function() {
+//     color.classList.remove('active');
+//     if(arrayAttempt.length == arraySolution.length 
+//       && arraySolution.length != 0) {
+//       score++;
+//       addScore();
+//       playSolution();
+//       arrayAttempt = [];
+
+//       console.log(arrayAttempt)
+//     }
+//   })
+// })
+
+
 
 const addToArrayAttempt = function(color) {
   switch (color.classList[0]) {
@@ -47,20 +105,21 @@ const addToArrayAttempt = function(color) {
     case 'yellow': 
     arrayAttempt.push(4); break;
   }
-  console.log(arrayAttempt);
+  // console.log(arrayAttempt);
 }
 
 const addToArraySolution = function() {
   let a = Math.floor(Math.random() * 4) + 1;
-  console.log(a);
+  // console.log(a);
   arraySolution.push(a);
 }
 
 const playSolution = function() {
 
-  document.getElementById('overlay').style.display = 'block';
-  console.log('block')
+  // document.getElementById('overlay').style.display = 'block';
+  // console.log('block')
   addToArraySolution(); // will add a random number to the solution
+  deactivateBoard();
   
   let index = 0;
   let interval = setInterval(() => {
@@ -79,6 +138,7 @@ const playSolution = function() {
     if(index >= arraySolution.length) {
       clearInterval(interval);
       index = 0;
+      activateBoard();
     }    
   }, 700);
 }
@@ -99,6 +159,23 @@ function gameOver() {
   menu.classList.add('d-none');
   scoreMenu.classList.add('d-none');
   gameOverMenu.classList.remove('d-none');
+
+  console.log(Ranking);
+  
+  currentPlayer.score = score;
+  
+  Ranking.push(currentPlayer);
+  console.log(Ranking);
+  
+  // Ranking.sort(function (a, b) {
+  //   return b.score - a.score;
+  // });
+
+  console.log(Ranking);
+  
+  localStorage.setItem('ranking', JSON.stringify(Ranking));  
+
+  updateRanking();
 }
 
 const song = document.createElement('audio')
@@ -115,19 +192,28 @@ const tryAgainButton = document.querySelector('.try-again');
 const menu = document.querySelector('.menu');
 const gameOverMenu = document.querySelector('.game-over.menu');
 const scoreMenu = document.querySelector('.score.menu');
+const input = document.querySelector('input');
 
 
-playButton.addEventListener('click', function() {
+ function play() {
   menu.classList.add('d-none');
   scoreMenu.classList.remove('d-none');
   gameOverMenu.classList.add('d-none');
   newGame();
-})
+  
+ }
+
+playButton.addEventListener('click', play)
+input.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    play();
+  }
+});
 
 tryAgainButton.addEventListener('click', function() {
   menu.classList.remove('d-none');
   scoreMenu.classList.add('d-none');
-  gameOverMenu.classList.add('d-none');
+  gameOverMenu.classList.add('d-none');    
 })
 
 function newGame() {
@@ -135,6 +221,8 @@ function newGame() {
   addScore();
   arrayAttempt = [];
   arraySolution = [];
+  currentPlayer.name = input.value;
+  currentPlayer.score = 0;
   playSolution();
 }
 
@@ -146,18 +234,38 @@ function addScore() {
   // scoreMenu.innerHTML
 }
 
+function updateRanking() {  
+  let rankingTable = document.querySelector('table');
+  
+  if(Ranking.length > 2) {    
+      rankingTable.innerHTML = `
+        <tr class="first">
+            <th>1.</th>
+            <th>${Ranking[0].name}</th>
+            <th>${Ranking[0].score}</th>
+        </tr>
+        <tr class="second">
+          <th>2.</th>
+          <th>${Ranking[1].name}</th>
+          <th>${Ranking[1].score}</th>
+        </tr>
+        <tr class="third">
+          <th>3.</th>
+          <th>${Ranking[2].name}</th>
+          <th>${Ranking[2].score}</th>
+        </tr>
+      `;
+  } else {
+    rankingTable.innerHTML = `
+      <tr class="third">
+        <td colspan="3">No sufficient players recorded.</td>
+      </tr>`;
+  }
+}
+
+
 
  
 
 
 
-
-// newRound -> playSolution, push new rando value to array, waits for the event click from user
-
-// do click, if attempt is correct, do anohter round, if false, game over
-
-
-
-// playSolution();
-
-// triggerEvent( colors[0]);

@@ -12,19 +12,26 @@ body {
   background-color: lightcyan;
 }
 
+header {
+  font-size: 3rem;
+  text-align: center;
+}
+
 .container {
   /* background-color: lightcyan; */
-  width: 70rem;
+  width: 80rem;
   height: 100vh;
   margin: 0 auto;
+  position: relative
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: nowrap;
   align-content: center;
   padding: 15px;
-  background-color: antiquewhite;
+  background-color: lightcyan;
 }
 nav .btn {
   padding: 0.7em 2em;
@@ -34,6 +41,7 @@ nav .btn {
   font-weight: 800;
   width: 150px;
   text-align: center;
+  font-size: 1em;
 }
 
 path {
@@ -41,7 +49,8 @@ path {
 }
 
 .active {
-  opacity: 60%;
+  /* opacity: 60%; */
+  filter: brightness(150%);
 }
 
 .box {
@@ -75,6 +84,7 @@ input {
   margin: 10px;
   padding: 5px 0 5px 5px;
   font-size: 1.5em;
+  margin-top: 200px;
 }
 
 .menu .btn {
@@ -117,4 +127,20 @@ menu {
   width: 100vw;
   height: 100vh;
   display: none;
+}
+
+.ranking-list {
+
+  background-color: coral;
+  border: 3px solid rgb(209, 115, 0);
+  font-weight: 800;
+  font-size: 1.2em;
+  position: absolute;
+  right: 0;
+  height: 200px;
+  width: 300px;
+  margin-right: 47px;
+  margin-top: -100px;
+  text-align: left;
+  /* display: none; */
 }
