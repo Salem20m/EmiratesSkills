@@ -10,17 +10,25 @@ const board = document.querySelector('svg');
 colors.forEach(function (color) {
   color.addEventListener('mousedown', function() {
     this.classList.add('active');
-    addToArrayAttempt(color);
-    let i = arrayAttempt.length-1
-    checkSolution(arrayAttempt[i], arraySolution[i])
-    addScore();
+    if(arraySolution.length != 0)
+    {
+      addToArrayAttempt(color);
+      let i = arrayAttempt.length-1
+      console.log('hey')
+      checkSolution(arrayAttempt[i], arraySolution[i]) 
+    }
     playSound(this.classList[0]);
   })
   color.addEventListener('mouseup', function() {
     color.classList.remove('active');
-    if(arrayAttempt.length == arraySolution.length) {
+    if(arrayAttempt.length == arraySolution.length 
+       && arraySolution.length != 0) {
+      score++;
+      addScore();
       playSolution();
       arrayAttempt = [];
+
+      console.log(arrayAttempt)
     }
   })
 })
@@ -49,6 +57,9 @@ const addToArraySolution = function() {
 }
 
 const playSolution = function() {
+
+  document.getElementById('overlay').style.display = 'block';
+  console.log('block')
   addToArraySolution(); // will add a random number to the solution
   
   let index = 0;
@@ -72,6 +83,7 @@ const playSolution = function() {
   }, 700);
 }
 
+
 function checkSolution (a,b) {
   if(a==b){
     return true;
@@ -87,12 +99,10 @@ function gameOver() {
   menu.classList.add('d-none');
   scoreMenu.classList.add('d-none');
   gameOverMenu.classList.remove('d-none');
-  score=-1;
 }
 
+const song = document.createElement('audio')
 function playSound(color){
-
-  const song = document.createElement('audio')
   song.src = `medias/sounds/${color}.mp3`;
   song.autoplay = true;
   song.load();
@@ -100,20 +110,34 @@ function playSound(color){
 }
 
 
-const playButtons = document.querySelectorAll('.play.btn')
-const menu = document.querySelector('.menu')
-const gameOverMenu = document.querySelector('.game-over.menu')
-const scoreMenu = document.querySelector('.score.menu')
+const playButton = document.querySelector('.play.btn');
+const tryAgainButton = document.querySelector('.try-again');
+const menu = document.querySelector('.menu');
+const gameOverMenu = document.querySelector('.game-over.menu');
+const scoreMenu = document.querySelector('.score.menu');
 
-playButtons.forEach(function (btn) {
-  btn.addEventListener('click', function() {
-    menu.classList.add('d-none');
-    scoreMenu.classList.remove('d-none');
-    gameOverMenu.classList.add('d-none');
-    arrayAttempt, arraySolution = [];
-    playSolution();
-  })
+
+playButton.addEventListener('click', function() {
+  menu.classList.add('d-none');
+  scoreMenu.classList.remove('d-none');
+  gameOverMenu.classList.add('d-none');
+  newGame();
 })
+
+tryAgainButton.addEventListener('click', function() {
+  menu.classList.remove('d-none');
+  scoreMenu.classList.add('d-none');
+  gameOverMenu.classList.add('d-none');
+})
+
+function newGame() {
+  score = 0;
+  addScore();
+  arrayAttempt = [];
+  arraySolution = [];
+  playSolution();
+}
+
 
 
 function addScore() {
