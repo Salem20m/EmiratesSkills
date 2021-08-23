@@ -1,23 +1,29 @@
-// 1.red, 2.blue, 3.green, 4.yellow
-
-// const arrayColors = ['red', 'blue', 'green', 'yellow'];
 let arraySolution = [];
 let arrayAttempt = [];
 let score = 0;
+let name = '';
 const colors = document.querySelectorAll('svg path');
 const board = document.querySelector('svg');
+const playButton = document.querySelector('.play.btn');
+const tryAgainButton = document.querySelector('.try-again');
+const menu = document.querySelector('.menu');
+const gameOverMenu = document.querySelector('.game-over.menu');
+const scoreMenu = document.querySelector('.score.menu');
+const input = document.querySelector('input');
+const rankingTable = document.querySelector('table');
+const rankingButton = document.querySelector('nav .btn');
 
 const currentPlayer = {
   name: '',
   score: 0
 }
 
-let Ranking = [];
+let ranking = [];
 
 if(!localStorage.getItem('ranking')) {
-  localStorage.setItem('ranking', JSON.stringify(Ranking));
+  localStorage.setItem('ranking', JSON.stringify(ranking));
 } else {
-  Ranking = JSON.parse(localStorage.getItem('ranking'));
+  ranking = JSON.parse(localStorage.getItem('ranking'));
 }
 
 updateRanking();
@@ -29,7 +35,6 @@ function mousedownFunction  () {
   {
     addToArrayAttempt(this);
     let i = arrayAttempt.length-1
-    // console.log('hey')
     checkSolution(arrayAttempt[i], arraySolution[i]) 
   }
   playSound(this.classList[0]);  
@@ -43,8 +48,6 @@ function mouseupFunction () {
     addScore();
     playSolution();
     arrayAttempt = [];
-
-    // console.log(arrayAttempt)
   }
 };
 
@@ -63,33 +66,6 @@ function deactivateBoard () {
   });
 }
 
-// colors.forEach(function (color) {
-//   color.addEventListener('mousedown', function() {
-//     this.classList.add('active');
-//     if(arraySolution.length != 0)
-//     {
-//       addToArrayAttempt(color);
-//       let i = arrayAttempt.length-1
-//       console.log('hey')
-//       checkSolution(arrayAttempt[i], arraySolution[i]) 
-//     }
-//     playSound(this.classList[0]);
-//   })
-//   color.addEventListener('mouseup', function() {
-//     color.classList.remove('active');
-//     if(arrayAttempt.length == arraySolution.length 
-//       && arraySolution.length != 0) {
-//       score++;
-//       addScore();
-//       playSolution();
-//       arrayAttempt = [];
-
-//       console.log(arrayAttempt)
-//     }
-//   })
-// })
-
-
 
 const addToArrayAttempt = function(color) {
   switch (color.classList[0]) {
@@ -105,20 +81,16 @@ const addToArrayAttempt = function(color) {
     case 'yellow': 
     arrayAttempt.push(4); break;
   }
-  // console.log(arrayAttempt);
 }
 
 const addToArraySolution = function() {
   let a = Math.floor(Math.random() * 4) + 1;
-  // console.log(a);
   arraySolution.push(a);
 }
 
 const playSolution = function() {
 
-  // document.getElementById('overlay').style.display = 'block';
-  // console.log('block')
-  addToArraySolution(); // will add a random number to the solution
+  addToArraySolution();
   deactivateBoard();
   
   let index = 0;
@@ -160,22 +132,13 @@ function gameOver() {
   scoreMenu.classList.add('d-none');
   gameOverMenu.classList.remove('d-none');
 
-  console.log(Ranking);
+  ranking.push({name,score});
   
-  currentPlayer.score = score;
-  
-  Ranking.push(currentPlayer);
-  console.log(Ranking);
-  
-  // Ranking.sort(function (a, b) {
-  //   return b.score - a.score;
-  // });
-
-  console.log(Ranking);
-  
-  localStorage.setItem('ranking', JSON.stringify(Ranking));  
-
   updateRanking();
+
+  console.log(ranking);
+  localStorage.setItem('ranking', JSON.stringify(ranking));  
+
 }
 
 const song = document.createElement('audio')
@@ -187,12 +150,6 @@ function playSound(color){
 }
 
 
-const playButton = document.querySelector('.play.btn');
-const tryAgainButton = document.querySelector('.try-again');
-const menu = document.querySelector('.menu');
-const gameOverMenu = document.querySelector('.game-over.menu');
-const scoreMenu = document.querySelector('.score.menu');
-const input = document.querySelector('input');
 
 
  function play() {
@@ -221,48 +178,53 @@ function newGame() {
   addScore();
   arrayAttempt = [];
   arraySolution = [];
-  currentPlayer.name = input.value;
-  currentPlayer.score = 0;
+  name = input.value;
+  score = 0;
   playSolution();
 }
 
 
 
 function addScore() {
-  // const newScore = document.createElement('h2');
   scoreMenu.innerHTML = `<h2>Score: ${score}</h2>`;
-  // scoreMenu.innerHTML
 }
 
 function updateRanking() {  
-  let rankingTable = document.querySelector('table');
-  
-  if(Ranking.length > 2) {    
+
+  ranking.sort(function (a, b) {
+    return b.score - a.score;
+  });
+
+  if(ranking.length > 2) {    
       rankingTable.innerHTML = `
         <tr class="first">
             <th>1.</th>
-            <th>${Ranking[0].name}</th>
-            <th>${Ranking[0].score}</th>
+            <th>${ranking[0].name}</th>
+            <th>${ranking[0].score}</th>
         </tr>
         <tr class="second">
           <th>2.</th>
-          <th>${Ranking[1].name}</th>
-          <th>${Ranking[1].score}</th>
+          <th>${ranking[1].name}</th>
+          <th>${ranking[1].score}</th>
         </tr>
         <tr class="third">
           <th>3.</th>
-          <th>${Ranking[2].name}</th>
-          <th>${Ranking[2].score}</th>
+          <th>${ranking[2].name}</th>
+          <th>${ranking[2].score}</th>
         </tr>
       `;
   } else {
     rankingTable.innerHTML = `
       <tr class="third">
-        <td colspan="3">No sufficient players recorded.</td>
+        <td colspan="3">Play ${3-ranking.length} more games to get the ranking.</td>
       </tr>`;
   }
 }
 
+
+rankingButton.addEventListener('click', function(){
+  rankingTable.classList.toggle('d-none');
+});
 
 
  
