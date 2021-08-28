@@ -13,10 +13,6 @@ const input = document.querySelector('input');
 const rankingTable = document.querySelector('table');
 const rankingButton = document.querySelector('nav .btn');
 
-const currentPlayer = {
-  name: '',
-  score: 0
-}
 
 let ranking = [];
 
