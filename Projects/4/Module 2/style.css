@@ -1,0 +1,56 @@
+.d-none {
+  display: none;
+}
+
+svg {
+  margin-top: 200px;
+  width: 600px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active {
+  filter: brightness(140%);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+table {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.btn {
+  padding: 10px 50px;
+  background-color: bisque;
+  border-radius: 5px;
+  border-bottom: 2px solid coral;
+}
+
+table {
+  width: 200px;
+  height: 130px;
+
+}
+td {
+  border: 1px solid coral;
+  text-align: center;
+  background-color:bisque;;
+}
+
+.game-over {
+  font-size: 4em;
+}
