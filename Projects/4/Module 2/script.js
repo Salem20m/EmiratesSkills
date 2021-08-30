@@ -172,6 +172,7 @@ function updateRank() {
   ranking.sort((a,b)=>{
     return b.score - a.score
   })
+  
   localStorage.setItem('ranking', JSON.stringify(ranking));
   
   if(ranking.length>2){

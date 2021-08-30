@@ -97,6 +97,7 @@ p {
     padding-top: 35px;
     background-image: url(Medias/imgs/background.png);
     background-size: cover;
+    background-attachment: fixed;
     color: white;
     height: 790px;
 }
