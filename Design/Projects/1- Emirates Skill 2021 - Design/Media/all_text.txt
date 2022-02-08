@@ -1,0 +1,42 @@
+# HEADER
+Logo UAE SPACE AGENCY
+Logo MOHAMMED BIN ZAYED SPACE CENTRE
+Logo EMM 
+## MENU
+Home
+Mission
+Hope Probe
+Why Mars?
+
+# CONTENT (SECTIONS)
+## About EMM
+The Emirates Mars Mission "Hope Probe" will be the first probe to provide a complete picture of the Martian atmosphere and its layers when it reaches the red planet’s orbit in 2021. It will help answer key questions about the global Martian atmosphere and the loss of hydrogen and oxygen gases into space over the span of one Martian year.
+
+## MISSION
+OBJECTIVES
+The First Complete Picture of the Martian Atmosphere.
+
+01
+Understand climate dynamics and the global weather map through characterizing the lower atmosphere of Mars.
+
+02
+Explain how the weather changes the escape of Hydrogen and Oxygen through correlating the lower atmosphere conditions with the upper atmosphere.
+
+03
+Understand the structure and variability of Hydrogen and Oxygen in the upper atmosphere, as well as identifying why Mars is losing them into space.
+
+## HOPE PROBE
+The Emirates Mars Mission “Hope Probe” is tasked to provide the first ever complete picture of the Martian atmosphere. Three stat-of-the-art science instruments have been designed to study the different aspects of the Martian Atmosphere.
+
+MISSION HIGHLIGHTS
+NAME: Emirates Mars Mission
+PROBE NAME: Hope Probe
+LAUNCHED: 20th July 2020, 12:58 AM (Dubai Time)
+LAUNCH LOCATION: Tanegashima​ Space Centre​, Japan
+CRUISING DISTANCE: 493.5 Million kms
+MISSION DURATION: One Martian Year (about 2 Earth years)
+
+## WHY MARS?
+WHY ARE WE EXPLORING MARS?
+
+The red planet has captured human imagination for centuries. Now, we are at a junction where we know a great deal about the planet, and we have the vision and technology to explore further. Mars is an obvious target for exploration for many reasons. From our pursuit to find extra-terrestrial life to someday expand human civilization to other planets, Mars serves as a long-term and collaborative project for the entire human race.

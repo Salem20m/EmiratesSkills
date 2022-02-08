@@ -86,6 +86,10 @@ header .button {
   justify-content: center;
 }
 
+header .middle-text h1{
+  color: red !important;
+}
+
 .middle-text {
   display: flex;
   flex-direction: column;
