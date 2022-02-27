@@ -1,0 +1,48 @@
+#HTML - TAGS
+<div>
+
+<ul>
+<li>
+
+<h1>..<h6>
+<p> Text </p>
+
+<img />
+
+<button> or <a>
+
+## ATRIBUTES
+<p attributes="value"> 
+  Adopt the perfect pet or more than 700 animal shelters...
+</p>
+
+### CLASS & ID
+class - you can use more than one time
+id - you can use only once
+
+<p class="home-subtitle"> 
+  Adopt the perfect pet or more than 700 animal shelters...
+</p>
+
+# Layout CSS
+Float
+CSS Grid
+Flexbox <--------
+
+# CSS
+element {
+  property: value;
+}
+
+div -> block element
+a -> inline element
+
+TASKS
+Search the propertis that will change the follow requirements:
+/* add the property for round the corners */
+/* add the property for create a linear gradient background */
+
+Do as much As you can of this game:
+https://flexboxfroggy.com/
+
+element with 400px + padding of 100px

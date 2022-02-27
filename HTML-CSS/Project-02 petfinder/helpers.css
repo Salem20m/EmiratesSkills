@@ -1,0 +1,15 @@
+.pos-absolute {
+  position: absolute;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-white {
+  color: #fff;
+}
+
+bg-white {
+  background-color: #fff;
+}
