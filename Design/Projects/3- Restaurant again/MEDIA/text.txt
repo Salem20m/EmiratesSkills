@@ -1,0 +1,82 @@
+**MENÚ**
+
+Home
+About us
+Menu
+Your Order
+Contact us
+
+
+----------------------------------------------
+
+**HOME**
+
+"Guatemala in one dish"
+"Order food for 2 WITH BONUS BEVERAGE FREE"
+
+
+----------------------------------------------
+
+**ABOUT US**
+
+Our main commitment is to offer an entire experience, Guatemala has the best place to enjoy and please your plans, our restaurant is of a very good design and always keeping the quality that characterizes us in a cozy and comfortable environment.
+
+
+----------------------------------------------
+
+**MENU**
+
+Enjoy our dishes with top quality ingredients.
+
+
+Fiambre
+A mixture of cold cuts and vegetables, chicken broth, cheeses and more that requires weeks of preparation and a lot of work. Still, it is a traditional dish of the celebration on All Saints' Day, an exceptional mix of flavors.
+Q40
+
+
+Kak Ik
+A dish typical of the Q'eqchi 'region, this broth is one of the favorites for its “chunto” (turkey) meat, different vegetables, spices and chili, a lot of chili. Rice to accompany, "pochitos" (butter tamales) and cocoa or pinol to drink. A delight.
+Q30
+
+
+Paches
+Made with potatoes and a message with enough tomato to give that red color -and great flavor- to one of the classic dishes on Thursdays. It tastes better if it brings chili and chicken.
+Q35
+
+
+Pepián
+Some of the ingredients of this Guatemalan delicacy are guaque chili, raisin, pepitoria, cinnamon, tomato, banana peel, tomato, cinnamon and much more. This dish is very special since it is prepared with 100% Guatemalan ingredients with an artisanal elaboration.
+Q25
+
+Enchiladas
+Toast with minced meat, cheese, a touch of egg, sauce, cheese, and beets for that signature color. A challenge to eat it without breaking the toast, but with a wonderful flavor to try.
+Q28
+
+Tamal
+With corn dough and an errand along with chicken or pork, tamales are a favorite meal on Saturdays, or at New Year's Eve parties. Along with a French bread and coffee, great.
+Q20
+
+----------------------------------------------
+
+**YOUR ORDER**
+
+· Name
+· E-mail
+· Phone
+· Address
+· Order Data (showing the list of dishes, with the option to select the quantity next to the name of each dish. Completing the quantity fields is optional).
+· Order total (shows the customer's total order, according to the quantities filled for each plate and the value of the plate).
+· "Send Order"
+· "Clean Order"
+
+
+
+----------------------------------------------
+
+**CONTACT US**
+
+Address: 4a Calle Oriente #015 CC La Fuente Antigua Guatemala, 00000, Guatemala
+Phone: +502 3180 8285
+E-mail: info@guatemalaflavors.gt
+Facebook: Guateflavors
+Instagram: Guateflavors
