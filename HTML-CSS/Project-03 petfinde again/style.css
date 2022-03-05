@@ -341,20 +341,18 @@ span {
 
 
 .home-icon {
-
   height: 30px;
+  width: 30px;
   /* width: 100%; */
-  background: url(MEDIA/images/1-search/hearthome.svg);
+  background-image: url(MEDIA/images/1-search/hearthome.svg);
   background-repeat: no-repeat;
   background-position: right;
   margin-top: -10px;
-  margin-right: 5px;
+  margin-left: 95px;
 }
 
 .home-icon:active {
-  background: url(MEDIA/images/1-search/hearthome-active.svg);
-  background-repeat: no-repeat;
-  background-position: right;
+  background-image: url(MEDIA/images/1-search/hearthome-active.svg);
 }
 
 
