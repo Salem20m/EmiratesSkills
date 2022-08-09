@@ -1,0 +1,51 @@
+.box {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);    
+  cursor: pointer;   
+}
+
+a {
+  font-size: 100px;
+  text-decoration: none;
+  position: relative;
+  color: blue;
+  /* overflow: hidden; */
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.4s linear;
+  background-color: red;
+}
+
+a:hover::after {  
+  width: 100%;      
+}
+
+/* a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 5px solid blue;    
+  left: -100%;  
+  bottom: 0;
+  transition: left 0.4s linear;
+}
+
+a:hover::after {
+  content: "";        
+  left: 0;
+} */
+

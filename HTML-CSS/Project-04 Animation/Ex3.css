@@ -1,0 +1,53 @@
+.box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 260px;
+  width: 170px;
+  background-color: rgb(199, 231, 231);
+  background-image: url('MEDIA/boy_sprite.png');
+  /* background-position-x: 0;
+  background-position-x: 33%; */
+  animation: animate 2s infinite step-end;
+  transition: none;
+}
+.box:hover {
+  
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+  11% {
+    background-position-x: 35%;
+  }
+  22% {
+    background-position-x: 66%;
+  }
+  33% {
+    background-position-x: 100%;
+  } 
+  44% {
+    background-position-x: 0;
+    background-position-y: 50%;
+  }
+  55% {
+    background-position-x: 35%;
+  }
+  66% {
+    background-position-x: 66%;
+  }
+  77% {
+    background-position-x: 100%;
+  }
+  88% {
+    background-position-x: 0;
+    background-position-y: 50%;
+  }
+  100% {
+    background-position-x: 35%;
+  }
+}

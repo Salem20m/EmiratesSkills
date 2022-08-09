@@ -1,0 +1,49 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);    
+  cursor: pointer;   
+}
+span {
+  left: 0;
+  margin-top: 20px;
+}
+.progress-container {
+  /* margin-left: 10px; */
+  padding: 2px;
+  width: 700px;
+  height: 15px;
+  background-color: rgb(37, 35, 35);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar {
+  /* width: attr(data-percentage); */
+  height: 13px;
+  background-color: orange;
+  border-radius: 6px;
+  animation: animate 6s  ease-in-out;
+}
+
+.HTML {
+  width: 85%;
+}
+.CSS {
+  width: 100%;
+}
+.JS {
+  width: 60%;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+}

@@ -1,0 +1,18 @@
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  height: 700px;
+  width: 1500px;    
+  cursor: pointer;   
+  background-image: url(MEDIA/laguna.jpg);    
+  background-color: transparent;
+  transition: background-color 1s;
+}
+
+.box:hover {
+  background-blend-mode: difference;
+  background-color: red;
+}
+

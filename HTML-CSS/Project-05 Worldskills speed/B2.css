@@ -1,0 +1,59 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1100px;
+  height: 800px;
+
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.container * {
+  background-color: rgb(168, 198, 226);
+  font-size: 1.7rem;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+
+.box1 {
+  grid-column: span 9;
+}
+
+.box2, .box3, .box4 {
+  grid-column: span 3;
+}
+
+.box5 {
+  grid-column: span 14;
+}
+
+.box6, .box9, .box11 {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+.box7 {
+  grid-column: span 4;
+  grid-row: span 5;
+}
+
+.box8 {
+  grid-column: span 10;
+  grid-row: span 2;
+}
+
+.box10 {
+  grid-column: span 10;
+  grid-row: span 3;
+}
+
+.box12 {
+  grid-column: span 18;
+}

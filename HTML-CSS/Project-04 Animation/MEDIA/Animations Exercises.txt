@@ -1,0 +1,10 @@
+Exercise 1: Hover the div to animate its width, height and rotation.
+Exercise 2: CSS3 Rotate, scale, transition animation.
+Exercise 3: Using the boy_sprite.png, make the boy animated.
+Exercise 4: Create an animation to shake the pineapple.jpg when hovered.
+Exercise 5: Make an animation to change the blend mode for laguna.jpg.
+Exercise 6: Animate the underlines of a link, when you hover the link, the underline should animate with a smooth transition.
+Exercise 7: Use the progress-bar-example.gif, and make a similar progress bar using only HTML & CSS.
+
+
+Always Use transition for all the exercises.

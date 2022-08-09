@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {  
+  height: 230px;
+  width: 230px;  
+  position: relative;  
+}
+
+.circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;  
+  animation: animate 2s infinite;
+}
+.red {
+  background-color: #f53e39;
+  animation-delay: -1.5s;  
+}
+.green {
+  background-color: #19a68b;    
+  animation-delay: -1.0s;  
+}
+.yellow {
+  background-color: #fda543;   
+  animation-delay: -0.5s;  
+}
+.black {
+  background-color: #173b48;    
+  animation-delay: 0;    
+}
+
+@keyframes animate {
+  0%, 100% {
+    top: 0; left: 0;
+  }
+  25% {
+    top: 0; left: 150px;
+  }
+  50% {
+    top: 150px; left: 150px;
+  }
+  75% {
+    top: 150px; left: 0;
+  }
+}

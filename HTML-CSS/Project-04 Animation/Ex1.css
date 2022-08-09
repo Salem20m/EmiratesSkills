@@ -1,0 +1,15 @@
+.box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+  transition: 0.5s;
+}
+.box:hover {
+  height: 150px;
+  width: 150px;
+  transform: rotate(45deg);
+}

@@ -51,7 +51,7 @@ main.innerHTML = content;
 
 
 console.log ( 
-  // get the list of all classes
+  // get the list of all atributes
   document.querySelector('img').attributes
 )
 // Check if it has an attribute
